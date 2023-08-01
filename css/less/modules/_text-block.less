@@ -1,0 +1,33 @@
+.gray-text-block {
+	background-color: #fafafa;
+	padding: 5px;
+
+	.dashed-text-block {
+		border-top: 1px dashed #e0e0e0;
+		border-bottom: 1px dashed #e0e0e0;
+		text-align: center;
+
+		&.simple-text-block {
+			padding: 45px 85px;
+
+			@media screen and (max-width :480px) {
+				padding: 35px 25px;
+
+			}
+		}
+	}
+
+	.text-block-ico {
+		display: block;
+		background-image: url(../images/decor1.png);
+		background-repeat: no-repeat;
+		width: 51px;
+		height: 59px;
+		margin: 0 auto 35px;
+	}
+	.text-block-text {
+		font-size: 12px;
+		line-height: 25px;
+		color: #a7a7a7;
+	}
+}

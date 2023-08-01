@@ -1,0 +1,60 @@
+.section-title-container {
+	margin-top: -6px;
+}
+.section-title{
+	font-size: 45px;
+	color: @color2;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 55px;
+	margin-top: 0;
+
+	@media screen and (max-width : 470px) {
+		margin-bottom: 15px;
+	}
+
+	&.white{
+		color: #fff;
+
+		&:after{
+			background-position: 0 -27px;
+		}
+	}
+
+	&:after{
+		background-image: url(../images/sprite.png);
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		width: 452px;
+		height: 17px;
+		left: 50%;
+		margin-left: -226px;
+		bottom: -33px;
+
+		@media screen and (max-width : 470px) {
+			display: none;
+		}
+	}
+
+	@media screen and (max-width : 480px) {
+		font-size: 35px;
+	}
+}
+.section-subtitle{
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+	color: #a7a7a7;
+	font-style: italic;
+	font-family: 'Open Sans', sans-serif;
+	margin-bottom: 35px;
+	padding: 0 20px;
+
+	&.white{
+		color: #fff;
+	}
+
+	@media screen and (max-width : 470px) {
+		padding: 0 7px;
+	}
+}

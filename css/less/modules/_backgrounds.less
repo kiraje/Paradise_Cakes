@@ -1,0 +1,159 @@
+.back-image{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+}
+.back-sprite{
+	background-image: url(../images/sprite.png);
+	background-repeat: no-repeat;
+}
+
+.full-width-slider {
+	.header-wrapper{
+		padding: 80px 0 0 0;
+
+		@media screen and (max-width : 640px) {
+			padding: 50px 0 0 0;
+		}
+	}
+}
+.header-wrapper {
+	padding: 80px 0;
+	-webkit-box-shadow: 0 2px 3px 1px rgba(2,3,3,0.1);
+	box-shadow: 0 2px 3px 1px rgba(2,3,3,0.1);
+
+	.pl-bg {
+		background-image: url(../images/bg-header.png);
+	}
+
+	@media screen and (max-width : 640px) {
+		padding: 50px 0;
+	}
+}
+.products-wrapper {
+	background-color: #fafafa;
+}
+.team-wrapper {
+
+	.pl-bg {
+		background-image: url(../images/bg-team.jpg);
+	}
+
+	@media screen and (max-width : 768px) {
+		padding-bottom: 30px;
+	}
+}
+.skils-wrapper {
+	padding: 80px 0 30px;
+
+	@media screen and (max-width : 640px) {
+		padding: 50px 0 30px;
+	}
+}
+.offers-wrapper {
+	padding-bottom: 80px;
+	@media screen and (max-width : 640px) {
+		padding-bottom: 50px;
+	}
+}
+.testimonilas-wrapper {
+
+	.pl-bg {
+		background-image: url(../images/bg-testimonilas.jpg);
+	}
+}
+.footer-wrapper {
+	background-color: #f4f4f4;
+	padding: 36px 0;
+
+}
+.services-wrapper {
+	@media screen and (max-width : 768px) {
+		padding-bottom: 30px;
+	}
+}
+
+.text-slider{
+	.header-wrapper{
+		padding: 80px 0 0 0;
+
+		@media screen and (max-width : 640px) {
+			padding: 50px 0 0 0;
+		}
+	}
+}
+
+
+
+/*=================================================
+=            Fiex background image fix            =
+=================================================*/
+
+.is-parallax {
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+
+	.pl-bg {
+		left: 0px;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		pointer-events: none;
+		background-size: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		-webkit-transform: translateZ(0);
+		   -moz-transform: translateZ(0);
+		     -o-transform: translateZ(0);
+		        transform: translateZ(0);
+	}
+}
+
+.is-video {
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+
+	.section-video-bg {
+		left: 0px;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		pointer-events: none;
+		-webkit-transform: translateZ(0);
+		   -moz-transform: translateZ(0);
+		     -o-transform: translateZ(0);
+		        transform: translateZ(0);
+	}
+
+	.no-video-pl & .section-video-bg{
+		position: absolute;
+	}
+
+	@media screen and (max-width: 1024px) {
+		.section-video-bg {
+			position: absolute;
+		}
+	}
+}
+
+.no-parallax {
+	.pl-bg {
+		position: absolute !important;
+		background-attachment: fixed;
+	}
+}
+
+.low-device {
+	.pl-bg {
+		position: absolute !important;
+		background-attachment: scroll !important;
+	}
+}
+
+/*-----  End of Fiex background image fix  ------*/
+

@@ -1,0 +1,201 @@
+.logo-block {
+	margin-bottom: 35px;
+}
+.nav-block {
+	border-top: 1px dashed #e6e6e6;
+	border-bottom: 1px dashed #e6e6e6;
+	margin-bottom: 35px;
+	height: 62px;
+	line-height: 62px;
+
+	// @media screen and (max-width : 991px) {
+	// 	height: auto;
+	// 	line-height: 1;
+	// 	padding: 15px 0;
+	// }
+}
+.social-list {
+	padding: 0;
+	margin-bottom: 0;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1;
+
+	li {
+		display: inline-block;
+		margin-right: 15px;
+		position: relative;
+	
+		a{
+			font-size: 14px;
+			color: #c4c4c4;
+		}
+
+		&:last-child{
+			margin-right: 0;
+		}
+
+		.fa {
+			-webkit-transition: color .5s ease;
+			   -moz-transition: color .5s ease;
+			    -ms-transition: color .5s ease;
+			     -o-transition: color .5s ease;
+			        transition: color .5s ease;
+		}
+
+		.circle {
+			position: absolute;
+			width: 35px;
+			height: 35px;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translateX(-50%) translateY(-50%);
+			   -moz-transform: translateX(-50%) translateY(-50%);
+			    -ms-transform: translateX(-50%) translateY(-50%);
+			     -o-transform: translateX(-50%) translateY(-50%);
+			        transform: translateX(-50%) translateY(-50%);
+		}
+
+		.circle-fg {
+			stroke: #c4c4c4;
+			fill: transparent;
+
+			stroke-dasharray: 90;
+			stroke-dashoffset: 90;
+			-webkit-transition: stroke-dashoffset .5s ease;
+			   -moz-transition: stroke-dashoffset .5s ease;
+			    -ms-transition: stroke-dashoffset .5s ease;
+			     -o-transition: stroke-dashoffset .5s ease;
+			        transition: stroke-dashoffset .5s ease;
+		}
+
+		&:hover {
+			.fa {
+				color: @color1;
+			}
+
+			.circle-fg{
+				stroke-dashoffset: 0;
+			}
+		}
+	}
+	// @media screen and (max-width : 991px) {
+	// 	display: block;
+	// 	text-align: center;
+	// }
+}
+
+
+/*=================================
+=            Page menu            =
+=================================*/
+
+.menu-list {
+	padding: 0;
+	margin-bottom: 0;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1;
+	li{
+		display: inline-block;
+		margin-right: 40px;
+
+		&:hover{
+			a{
+				color: @color1;
+			}
+		}
+
+		a{
+			font-size: 22px;
+			color: #898989;
+			font-family: 'Dancing Script', cursive;
+			text-decoration: none;
+			-webkit-transition: color .25s ease;
+			   -moz-transition: color .25s ease;
+			    -ms-transition: color .25s ease;
+			     -o-transition: color .25s ease;
+			        transition: color .25s ease;
+
+		}
+
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+
+	@media screen and (max-width : 991px) {
+		display: block;
+		text-align: center;
+		margin-bottom: 30px;
+	}
+}
+
+.mobile-menu-wrapper {
+	display: none;
+
+	.mobile-button {
+		width: 40px;
+		height: 40px;
+		background-color: #fafafa;
+		line-height: 40px;
+		text-align: center;
+		cursor: pointer;
+
+		i{
+			font-size: 24px;
+			color: #a7a7a7;
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+}
+
+.mobile-menu {
+	background-color: #fafafa;
+	text-align: center;
+	padding: 25px 0;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	visibility: hidden;
+	-webkit-transform: translateY(-100%);
+	   -moz-transform: translateY(-100%);
+	    -ms-transform: translateY(-100%);
+	     -o-transform: translateY(-100%);
+	        transform: translateY(-100%);
+
+	.menu-mobile {
+		display: block;
+		margin-bottom: 0;
+
+		li{
+			display: block;
+			text-align: center;
+			margin-bottom: 20px;
+			margin-right: 0;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+
+			a{
+				display: inline-block;
+			}
+		}
+	}
+}
+
+@media screen and (max-width : 990px) {
+	.mobile-menu-wrapper {
+		display: inline-block;
+	}
+
+	.menu-list {
+		display: none;
+	}
+}	
+
+/*-----  End of Page menu  ------*/

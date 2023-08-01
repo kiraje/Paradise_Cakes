@@ -1,0 +1,70 @@
+.quotes-block {
+	padding: 70px 140px 70px;
+	background-image: url(../images/phrases.png);
+	background-repeat: no-repeat;
+	text-align: center;
+	max-width: 620px;
+	min-height: 390px;
+	line-height: 250px;
+	margin: 0 auto;
+	background-size: 100% 100%;
+
+	@media screen and (max-width : 640px) {
+		background-image: none;
+		background-color: rgba(255, 255, 255, 0.7);
+		padding: 30px 40px;
+		min-height: 100px;
+	}
+}
+.quotes-image {
+	background-image: url(../images/quotes-ico.png);
+	background-repeat: no-repeat;
+	width: 45px;
+	height: 32px;
+	display: block;
+	margin: 0 auto 30px;
+}
+.quotes-text {
+	font-size: 16px;
+	color: #686868;
+	font-style: italic;
+	line-height: 27px;
+	margin-bottom: 35px;
+}
+.quotes-author {
+	font-size: 25px;
+	color: #3f3f3f;
+	font-weight: 600;
+}
+.quote-elem {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1;
+}
+
+.quotes-wrapper {
+
+	.cover-el {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		-webkit-transform: translateY(-50%);
+		   -moz-transform: translateY(-50%);
+		    -ms-transform: translateY(-50%);
+		     -o-transform: translateY(-50%);
+		        transform: translateY(-50%);
+
+        &.absolute {
+        	top: 0;
+        	left: 50%;
+        	width: auto;
+        	height: 100%;
+        	-webkit-transform: translateX(-50%);
+        	   -moz-transform: translateX(-50%);
+        	    -ms-transform: translateX(-50%);
+        	     -o-transform: translateX(-50%);
+        	        transform: translateX(-50%);
+        }
+	}
+}

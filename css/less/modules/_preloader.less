@@ -1,0 +1,170 @@
+.page-preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    background-color: #fff;
+    .preloader-container {
+        pointer-events: none;
+        width: 200px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -o-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        
+        img {
+            width: 100%;
+            -webkit-animation: pulse 40s infinite alternate;
+            animation: pulse 40s infinite alternate;
+        }
+    }
+}
+@-webkit-keyframes pulse {
+    0% {
+        background-color: #45CEEF;
+    }
+    25% {
+        background-color: #fae53b;
+    }
+    50% {
+        background-color: #fc7184;
+    }
+    75% {
+        background-color: #64d7fc;
+    }
+    100% {
+        background-color: #fdc56d;
+    }
+}
+@keyframes pulse {
+    0% {
+        background-color: #45CEEF;
+    }
+    25% {
+        background-color: #fae53b;
+    }
+    50% {
+        background-color: #fc7184;
+    }
+    75% {
+        background-color: #64d7fc;
+    }
+    100% {
+        background-color: #fdc56d;
+    }
+}
+
+
+
+
+/*==========================================
+=            Products preloader            =
+==========================================*/
+
+@bodyBackgroundColor: #fff;
+@circleColor: #83cfd7;
+@circleSize: 1em;
+@circleCount: 3;
+@circleMargin: @circleSize / 3;
+@loaderWidth: (@circleCount * @circleSize) + ((@circleCount - 1) * @circleMargin);
+@loaderHeight: @circleSize;
+@duration: .5s;
+@-webkit-keyframes prodLoader {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@-moz-keyframes prodLoader {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@-o-keyframes prodLoader {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes prodLoader {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+body {
+    background-color: @bodyBackgroundColor;
+}
+.prod-loader {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, .7);
+    display: none;
+
+    .circle {
+        float: left;
+        width: @circleSize;
+        height: @circleSize;
+        background-color: @circleColor;
+        border-radius: 100%;
+        box-shadow: 0 1px 2px darken(@bodyBackgroundColor, 25%);
+        -webkit-animation: prodLoader @duration cubic-bezier(.17, .46, .21, .98) 0 infinite alternate;
+        // For Firefox: "0s" instead of "0".
+        -moz-animation: prodLoader @duration cubic-bezier(.17, .46, .21, .98) 0s infinite alternate;
+        -o-animation: prodLoader @duration cubic-bezier(.17, .46, .21, .98) 0 infinite alternate;
+        animation: prodLoader @duration cubic-bezier(.17, .46, .21, .98) 0 infinite alternate;
+        // Animation fix for Opera.
+        -o-transform: translateX(0);
+    }
+    .circle:nth-child(2) {
+        -webkit-transform: translateX(@circleMargin);
+        -moz-transform: translateX(@circleMargin);
+        -o-transform: translateX(@circleMargin);
+        -ms-transform: translateX(@circleMargin);
+        transform: translateX(@circleMargin);
+        -webkit-animation-delay: @duration / 2.5;
+        -moz-animation-delay: @duration / 2.5;
+        -o-animation-delay: @duration / 2.5;
+        animation-delay: @duration / 2.5;
+    }
+    .circle:nth-child(3) {
+        -webkit-transform: translateX(@circleMargin * 2);
+        -moz-transform: translateX(@circleMargin * 2);
+        -o-transform: translateX(@circleMargin * 2);
+        -ms-transform: translateX(@circleMargin * 2);
+        transform: translateX(@circleMargin * 2);
+        -webkit-animation-delay: (@duration / 2.5) * 2;
+        -moz-animation-delay: (@duration / 2.5) * 2;
+        -o-animation-delay: (@duration / 2.5) * 2;
+        animation-delay: (@duration / 2.5) * 2;
+    }
+    .loader {
+        position: absolute;
+        height: @loaderHeight;
+        width: @loaderWidth;
+        top: 50%;
+        left: 50%;
+        margin-left: -@loaderWidth / 2;
+        margin-top: -@loaderHeight / 2;
+    }
+}
+/*-----  End of Products preloader  ------*/
