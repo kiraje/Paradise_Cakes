@@ -511,7 +511,7 @@
 												<div class="col-md-6 col-sm-6 col-xs-12">
 													<div class="contact-block">
 														<img src="images/logo.png" alt="" class="logo-mini">
-														<p class="contact-text">Duis condimentum nisi eget erat consectetur pretium. Suspendisse nec tortor sit amet sem aliquam blandit. Phasellus posuere pellentesque tortor, vitae eleifend neque interdum eget. Proin sagittis massa sed eros lobortis consequat. Sed id scelerisque turpis, facilisis fringilla enim.</p>
+														<p class="contact-text">.</p>
 														<address>
 															<p class="address browser,support,triablo">
 																<i class="fa fa-map-marker"></i>
